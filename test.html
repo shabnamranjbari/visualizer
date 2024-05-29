@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS to limit the size of images */
+        .image-container {
+            max-width: 300px; /* Maximum width of the container */
+            max-height: 200px; /* Maximum height of the container */
+            overflow: hidden; /* Hide any overflow */
+        }
+
+        .image-container img {
+            width: 100%; /* Make the image fill the container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any extra space below the image */
+        }
+    </style>
+</head>
+<body>
+    <!-- Image container with a maximum size -->
+    <div class="image-container">
+        <!-- Image with src and alt attributes -->
+        <img src="{{ url_for('static', filename='111.jpg') }}" alt="Your Image Description">
+    </div>
+</body>
+</html>
